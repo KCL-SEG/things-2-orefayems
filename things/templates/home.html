@@ -2,10 +2,12 @@
 <head>
   <title>Things</title>
 </head>
-<body>
-  <h1>
-    Things
-  </h1>
-  <p>Some stuff about things goes here.</p>
-</body>
+  <body>
+    <h1> Sign up</h1>
+    <form action="{% url 'home' %}" method="post">
+      {% csrf_tokwn %}
+      {{ form.as_p}}
+      <input type="submit" value="submit">
+    </form>
+  </body>
 </html>
